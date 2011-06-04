@@ -1,0 +1,102 @@
+/**
+ * c4o
+ */
+
+@import 'partials/config-vars';
+@import 'partials/mixins';
+//@import url('diagnostic.css');
+@import 'partials/reset';
+
+
+body, select, input, textarea {
+	color: #444;
+	/* font-family: Georgia, serif;	*/
+}
+
+//@import 'partials/form-responses';
+
+#page {}
+
+#main {}
+
+#content {}
+
+#sidebar {}
+
+#header {
+	position: relative;
+	
+	h1 {
+		
+		a {
+			
+			&:hover {
+				
+			}
+		}
+		
+	}
+}
+
+
+#footer {
+	clear: both;
+}
+
+
+
+#nav-main {
+	
+	ul {
+			
+		li {
+		
+			a {
+			
+				&:hover {
+				
+				}
+			}
+		}
+	}
+}
+
+
+nav.sub {
+	
+	ul {
+		
+		li {
+			
+			a {
+				
+				&:hover {
+					
+				}
+			}
+		}
+	}
+}
+
+
+nav.utility {
+	
+	ul {
+		
+		li {
+			
+			a {
+				
+				&:hover {
+					
+				}
+			}
+		}
+	}
+}
+
+
+@import 'partials/media-queries';
+@import 'partials/print';
+
+/* EOF */

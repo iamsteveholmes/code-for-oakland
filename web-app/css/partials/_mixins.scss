@@ -1,0 +1,57 @@
+
+@mixin border-radius($top: 8px, $right: $top, $bottom: $top, $left: $top) {
+	
+	// Mobile Safari requires that the long hand version be used
+	// http://lesjames.com/247/mobile-safari-and-border-radius/
+
+	@if $top == '0 !important' {
+		-webkit-border-top-left-radius: 0 !important;
+		-webkit-border-top-right-radius: 0 !important;
+		-webkit-border-bottom-right-radius: 0 !important;
+		-webkit-border-bottom-left-radius: 0 !important;
+		-moz-border-radius: 0 !important;
+		border-radius: 0 !important;
+	}
+	@else {
+		-webkit-border-top-left-radius: $top;
+		-webkit-border-top-right-radius: $right;
+		-webkit-border-bottom-right-radius: $bottom;
+		-webkit-border-bottom-left-radius: $left;
+		-moz-border-radius: $top $right $bottom $left;
+		border-radius: $top $right $bottom $left;
+	}
+}
+
+@mixin box-shadow($value) {
+	// Multiple comma separated values should be wrapped in quotes.
+	// Example box-shadow('inset 0 1px 1px #fff, 0 1px 2px #000')
+	-moz-box-shadow: #{$value};
+	-webkit-box-shadow: #{$value};
+	box-shadow: #{$value};	
+}
+
+@mixin linear-gradient($start_color, $end_color, $fallback) {
+	background: $fallback;
+	background: -moz-linear-gradient(0% 100% 90deg, $start_color, $end_color);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from($end_color), to($start_color));
+}
+
+@mixin font-stack-helvetica() {
+	font-family: Helvetica, 'Helvetica Neue', Arial, sans-serif;
+}
+
+@mixin font-stack-verdana() {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@mixin font-stack-georgia() {
+	font-family: Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif
+}
+
+@mixin font-stack-lucida() {
+	font-family: 'Lucida Grande', 'Lucida Sans', 'Lucida Sans Unicode', sans-serif;
+}
+
+@mixin font-stack-myriad() {
+	font-family: 'MyriadSet-Medium', 'Myriad Set Medium', 'MyriadPro-Medium', 'Myriad Pro Medium', 'MyriadSet', 'Myriad Set', 'MyriadPro', 'Myriad Pro', 'Lucida Grande', 'Lucida Sans', 'Lucida Sans Unicode', sans-serif;
+}
