@@ -88,3 +88,7 @@ log4j = {
 
     warn   'org.mortbay.log'
 }
+
+grails.plugin.cloudfoundry.username = 'iamsteveholmes@gmail.com'
+grails.plugin.cloudfoundry.password = 'LirevOoy'
+grails.plugin.cloudfoundry.appname = 'freetread'
