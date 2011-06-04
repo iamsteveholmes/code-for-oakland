@@ -10,6 +10,4 @@
 stacktrace.log
 test/reports
 target/**
-application.properties
-web-app/WEB-INF/**
 
