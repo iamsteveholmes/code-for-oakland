@@ -23,6 +23,6 @@
 		<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
 		<g:javascript library="application"/>
 
-        Joel and Andy was here
+        Joel and Andy and Steve was here
 	</body>
 </html>
