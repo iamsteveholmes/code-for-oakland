@@ -212,12 +212,128 @@ body, select, input, textarea {
   /* font-family: Georgia, serif;	*/
 }
 
+html {
+  background: #555;
+  margin: 40px 0 0;
+}
+
+body {
+  width: 320px;
+  height: 480px;
+  margin: 0 auto;
+  font-family: helvetica;
+  background: #eee;
+  -moz-box-shadow: 0 0 8px rgb(0, 0, 0, 1);
+  -webkit-box-shadow: 0 0 8px rgb(0, 0, 0, 1);
+  box-shadow: 0 0 8px rgb(0, 0, 0, 1);
+}
+
+#main {
+  border-top: 1px solid #fff;
+  padding: 20px 10px;
+}
+
 #header {
   position: relative;
+  background: white;
+  background: -moz-linear-gradient(0% 100% 90deg, #666666, #999999);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#999999), to(#666666));
+}
+#header h1 {
+  font-size: 21px;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.7);
 }
 
 #footer {
   clear: both;
+}
+
+label {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+input {
+  padding: 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  -webkit-border-top-left-radius: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+}
+
+h2 {
+  font-size: 18px;
+  margin: 0 0 20px;
+}
+
+a.btn {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 3px 7px 2px;
+  background: #666;
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid #333;
+  text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.7);
+  background: white;
+  background: -moz-linear-gradient(0% 100% 90deg, #666666, #999999);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#999999), to(#666666));
+  -webkit-border-top-left-radius: 4px;
+  -webkit-border-top-right-radius: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  -moz-border-radius: 4px 4px 4px 4px;
+  border-radius: 4px 4px 4px 4px;
+}
+
+#results-page table {
+  width: 100%;
+  margin: 20px 0 10px;
+  font-size: 15px;
+}
+#results-page table td {
+  border: 1px dotted #bbb;
+  border-width: 1px 0;
+  padding: 6px;
+}
+#results-page table h4 {
+  font-weight: normal;
+}
+#results-page a.btn {
+  float: right;
+}
+
+#detail-page table {
+  margin-top: -10px;
+}
+#detail-page td, #detail-page th {
+  padding: 2px;
+}
+#detail-page th {
+  padding-right: 8px;
+  text-align: right;
+}
+#detail-page .detail-description {
+  margin-top: 10px;
+  border: 1px dotted #ccc;
+  border-width: 1px 0;
+  padding-top: 12px;
+}
+#detail-page .detail-description p {
+  margin: 0 0 12px;
+}
+#detail-page .btn {
+  float: right;
+  margin-right: 10px;
 }
 
 @media only screen and (min-width: 480px) {

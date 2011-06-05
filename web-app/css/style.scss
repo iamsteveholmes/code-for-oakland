@@ -15,9 +15,26 @@ body, select, input, textarea {
 
 //@import 'partials/form-responses';
 
+html {
+	background: #555;
+	margin: 40px 0 0;
+}
+
+body {
+	width: 320px;
+	height: 480px;
+	margin: 0 auto;
+	font-family: helvetica;
+	background: #eee;
+	@include box-shadow('0 0 8px rgb(0, 0, 0, 1)');
+}
+
 #page {}
 
-#main {}
+#main {
+	border-top: 1px solid #fff;
+	padding: 20px 10px;
+}
 
 #content {}
 
@@ -25,8 +42,14 @@ body, select, input, textarea {
 
 #header {
 	position: relative;
+	@include linear-gradient(#666, #999, #fff);
 	
 	h1 {
+		font-size: 21px;
+		line-height: 40px;
+		text-align: center;
+		color: #fff;
+		text-shadow: 0 1px 1px rgba(0, 0, 0, .7);
 		
 		a {
 			
@@ -44,6 +67,105 @@ body, select, input, textarea {
 }
 
 
+label {
+	display: block;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+input {
+	padding: 5px;
+	font-size: 16px;
+	border: 1px solid #ccc;
+	@include border-radius(5px);
+}
+
+#search-page {
+	
+	input {
+		
+	}
+	
+}
+
+
+h2 {
+	font-size: 18px;
+	margin: 0 0 20px;
+}
+
+a.btn {
+	display: inline-block;
+	margin: 0 auto;
+	padding: 3px 7px 2px;
+	background: #666;
+	font-size: 14px;
+	color: #fff;
+	text-decoration: none;
+	border: 1px solid #333;
+	text-shadow: 0 -1px 0px rgba(0, 0, 0, .7);
+	@include linear-gradient(#666, #999, #fff);
+	@include border-radius(4px);
+}
+
+#results-page {
+	
+	table {
+		width: 100%;
+		margin: 20px 0 10px;
+		font-size: 15px;
+		
+		
+		
+		td {
+			border: 1px dotted #bbb;
+			border-width: 1px 0;
+			padding: 6px;
+		}
+		
+		h4 {
+			font-weight: normal;
+		}
+	}
+	
+	a.btn {
+		float: right;
+	}
+}
+
+#detail-page {
+	table {
+		margin-top: -10px;
+		
+		
+	}
+	
+	td, th {
+		padding: 2px;
+	}
+	
+	th {
+		padding-right: 8px;
+		text-align: right;
+	}
+	
+	.detail-description {
+		margin-top: 10px;
+		
+		border: 1px dotted #ccc;
+		border-width: 1px 0;
+		padding-top: 12px;
+		
+		p {
+			margin: 0 0 12px;
+		}
+	}
+	
+	.btn {
+		float: right;
+		margin-right: 10px;
+	}
+}
 
 #nav-main {
 	
