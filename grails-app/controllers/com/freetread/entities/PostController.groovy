@@ -8,7 +8,15 @@ class PostController {
 	
 	def main = {
 		params.max = Math.min(params.max ? params.int('max') : 10, 100)
-		[postInstanceList: Post.list(params), postInstanceTotal: Post.count()]
+		def query = params.query
+		
+		if (query) {
+			//def posts = Post.find("from Post as p where p.subject like :query",[query: query])
+			def posts = Post.findAllBySubjectLike("%" + query + "%")
+			return [postInstanceList: posts, postInstanceTotal: posts ? posts.size() : 0]
+		} else {
+			return [postInstanceList: Post.list(params), postInstanceTotal: Post.count()]
+		}
 	}
 	
     def index = {
